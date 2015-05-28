@@ -4,7 +4,7 @@ WORKDIR=/home/work/open-falcon
 
 function deploy_config {
     if [ ! -f "$WORKDIR/conf/$1" ]; then
-        cp /config/$1 $WORKDIR/conf/
+        cp /conf/$1 $WORKDIR/conf/
     fi
 }
 

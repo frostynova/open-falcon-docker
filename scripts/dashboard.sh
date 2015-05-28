@@ -1,6 +1,6 @@
 #!/bin/sh
 
-WORKDIR=/homw/work/open-falcon
+WORKDIR=/home/work/open-falcon
 
 cd $WORKDIR/dashboard
 

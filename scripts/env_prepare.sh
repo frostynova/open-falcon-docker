@@ -15,8 +15,12 @@ echo 'mysql-server mysql-server/root_password_again password open-falcon' | debc
 apt-get -y update
 apt-get -y install git mysql-server redis-server supervisor wget
 
+echo "manual" > /etc/init/mysql.override
+echo "manual" > /etc/init/redis-server.override
+rm -f /etc/rc*/*mysql
+rm -f /etc/rc*/*redis-server
+
 /etc/init.d/mysql start
-/etc/init.d/redis-server start
 mysql mysql -uroot -popen-falcon -e "UPDATE user SET Password='' WHERE User='root'; FLUSH PRIVILEGES;"
 
 cd $WORKDIR

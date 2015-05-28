@@ -1,7 +1,7 @@
 FROM    ubuntu:trusty
 
-ADD     scripts /
-ADD     conf    /
+ADD     scripts /scripts
+ADD     conf    /conf
 
 RUN     sh /scripts/env_prepare.sh
 RUN     sh /scripts/dashboard.sh
