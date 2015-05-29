@@ -12,9 +12,11 @@ function deploy_config {
 sed -i "s|^datadir.*$|datadir=$WORKDIR/mysql|" /etc/mysql/my.cnf
 
 if [ ! -d "$WORKDIR/mysql/mysql" ]; then
-    cp -r /var/lib/mysql $WORKDIR/mysql
+    cp -r -P /var/lib/mysql $WORKDIR/
 fi
 
+deploy_config my.cnf
+deploy_config redis.conf
 deploy_config alarm.cfg
 deploy_config fe.cfg 
 deploy_config graph.cfg
