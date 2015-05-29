@@ -32,6 +32,8 @@ mysql -u root < db_schema/portal-db-schema.sql
 mysql -u root < db_schema/links-db-schema.sql
 mysql -u root < db_schema/uic-db-schema.sql
 
+/etc/init.d/mysql stop
+
 cd $WORKDIR
 mkdir tmp
 wget $OPEN_FALCON_BIN -O open-falcon-latest.tar.gz

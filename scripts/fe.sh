@@ -8,3 +8,6 @@ mkdir fe
 cd fe
 wget $FE_BIN 
 tar zxvf open-falcon-fe-0.0.1.tar.gz
+/etc/init.d/mysql start
+mysql -u root < scripts/schema.sql
+/etc/init.d/mysql stop
