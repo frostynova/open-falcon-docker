@@ -26,9 +26,21 @@ deploy_config judge.cfg
 deploy_config query.cfg
 deploy_config sender.cfg
 deploy_config transfer.cfg
+
 deploy_config dashboard.py
 rm $WORKDIR/dashboard/rrd/config.py
+rm $WORKDIR/dashboard/gunicorn.conf
 ln -s $WORKDIR/conf/dashboard.py $WORKDIR/dashboard/rrd/config.py
+ln -s $WORKDIR/conf/dashboard-gunicorn.conf $WORKDIR/dashboard/gunicorn.conf
+
 deploy_config portal.py
 rm $WORKDIR/portal/frame/config.py
+rm $WORKDIR/portal/gunicorn.conf
 ln -s $WORKDIR/conf/portal.py $WORKDIR/portal/frame/config.py
+ln -s $WORKDIR/conf/portal-gunicorn.conf $WORKDIR/portal/gunicorn.conf
+
+deploy_config links.py
+rm $WORKDIR/links/frame/config.py
+rm $WORKDIR/links/gunicorn.conf
+ln -s $WORKDIR/conf/links.py $WORKDIR/links/frame/config.py
+ln -s $WORKDIR/conf/links-gunicorn.conf $WORKDIR/links/gunicorn.conf
