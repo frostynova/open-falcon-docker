@@ -13,6 +13,6 @@ ADD     conf    /conf
 ADD     startup.sh /scripts/startup.sh
 ADD     supervisord.conf /home/work/open-falcon/conf/supervisord.conf
 
-EXPOSE  [8433, 6030, 8080, 6060, 9966]
+EXPOSE  [8433, 6030, 5050, 8080, 8081, 6060]
 
 CMD     ["/usr/bin/supervisord", "-c", "/home/work/open-falcon/conf/supervisord.conf"]
