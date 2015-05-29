@@ -1,7 +1,8 @@
 #!/bin/sh
 
 WORKDIR=/home/work/open-falcon
-FE_BIN="http://7xiumq.com1.z0.glb.clouddn.com/open-falcon-fe-0.0.1.tar.gz"
+#FE_BIN="http://7xiumq.com1.z0.glb.clouddn.com/open-falcon-fe-0.0.1.tar.gz"
+FE_BIN="https://dl.dropboxusercontent.com/u/65132683/open-falcon-fe-0.0.1.tar.gz"
 
 cd $WORKDIR
 mkdir fe
