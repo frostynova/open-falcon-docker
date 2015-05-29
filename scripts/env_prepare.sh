@@ -42,4 +42,4 @@ for x in `find ./tmp/ -name "*.tar.gz"`;do \
     tar -zxf $x -C $app; \
 done
 
-
+apt-get -y clean

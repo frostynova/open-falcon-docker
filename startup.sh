@@ -44,3 +44,16 @@ rm $WORKDIR/links/frame/config.py
 rm $WORKDIR/links/gunicorn.conf
 ln -s $WORKDIR/conf/links.py $WORKDIR/links/frame/config.py
 ln -s $WORKDIR/conf/links-gunicorn.conf $WORKDIR/links/gunicorn.conf
+
+supervisorctl start mysql
+supervisorctl start redis
+sleep 5
+supervisorctl start alarm
+supervisorctl start dashboard
+supervisorctl start fe
+supervisorctl start graph
+supervisorctl start hbs
+supervisorctl start judge
+supervisorctl start query
+supervisorctl start sender
+supervisorctl start transfer
