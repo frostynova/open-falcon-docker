@@ -9,6 +9,6 @@ RUN     sh /scripts/fe.sh
 RUN     sh /scripts/portal.sh
 RUN     sh /scripts/env_clean.sh 
 
-ADD     supervisord.conf /etc/supervisor/supervisord.conf
+ADD     supervisord.conf /home/work/open-falcon/conf/supervisord.conf
 
-CMD     ["/usr/bin/supervisord"]
+CMD     ["/usr/bin/supervisord", "-c", "/home/work/open-falcon/conf/supervisord.conf"]
