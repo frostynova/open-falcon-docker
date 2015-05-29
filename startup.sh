@@ -60,3 +60,5 @@ supervisorctl start judge
 supervisorctl start query
 supervisorctl start sender
 supervisorctl start transfer
+supervisorctl start links
+supervisorctl start portal
