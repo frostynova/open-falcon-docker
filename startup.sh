@@ -8,12 +8,12 @@ function deploy_config {
     fi
 }
 
-
-sed -i "s|^datadir.*$|datadir=$WORKDIR/mysql|" /etc/mysql/my.cnf
+chown -R work.work $WORKDIR
 
 if [ ! -d "$WORKDIR/mysql/mysql" ]; then
     rsync -a /var/lib/mysql $WORKDIR/
 fi
+
 
 deploy_config my.cnf
 deploy_config redis.conf
