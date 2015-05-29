@@ -4,5 +4,6 @@ WORKDIR=/home/work/open-falcon
 
 cd $WORKDIR/portal
 
-pip install -r pip_requirements.txt
+virtualenv ./env
+./env/bin/pip install -r pip_requirements.txt
 
