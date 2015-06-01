@@ -13,6 +13,6 @@ ADD     conf    /conf
 ADD     startup.sh /scripts/startup.sh
 ADD     supervisord.conf /etc/supervisor/supervisord.conf
 
-EXPOSE  8433 6030 5050 8080 8081 6060
+EXPOSE  8433 6030 5050 8080 8081 6060 5090
 
 CMD     ["/usr/bin/supervisord"]
