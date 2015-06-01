@@ -47,6 +47,8 @@ rm $WORKDIR/links/gunicorn.conf
 ln -s $WORKDIR/conf/links.py $WORKDIR/links/frame/config.py
 ln -s $WORKDIR/conf/links-gunicorn.conf $WORKDIR/links/gunicorn.conf
 
+deploy_config nginx.conf
+
 supervisorctl start mysql
 supervisorctl start redis
 sleep 5
@@ -61,3 +63,4 @@ supervisorctl start sender
 supervisorctl start transfer
 supervisorctl start links
 supervisorctl start portal
+supervisorctl start nginx
