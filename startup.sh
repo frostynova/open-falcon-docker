@@ -13,6 +13,7 @@ if [ ! -d "$WORKDIR/mysql/mysql" ]; then
     rsync -a /var/lib/mysql $WORKDIR/
 fi
 
+chown -R work.work $WORKDIR/data
 
 deploy_config my.cnf
 deploy_config redis.conf
