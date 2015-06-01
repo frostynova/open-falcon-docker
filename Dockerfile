@@ -7,6 +7,7 @@ RUN     sh /scripts/dashboard.sh
 RUN     sh /scripts/fe.sh
 RUN     sh /scripts/portal.sh
 RUN     sh /scripts/links.sh
+RUN     sh /scripts/nginx.sh
 RUN     sh /scripts/env_clean.sh 
 
 ADD     conf    /conf
