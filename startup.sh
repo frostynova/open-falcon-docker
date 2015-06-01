@@ -8,7 +8,6 @@ function deploy_config {
     fi
 }
 
-chown -R work.work $WORKDIR
 
 if [ ! -d "$WORKDIR/mysql/mysql" ]; then
     rsync -a /var/lib/mysql $WORKDIR/
