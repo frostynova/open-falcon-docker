@@ -1,8 +1,8 @@
 #!/bin/sh
 
 WORKDIR=/home/work/open-falcon
-#OPEN_FALCON_BIN="http://7xiumq.com1.z0.glb.clouddn.com/open-falcon-binary-0.0.2.tar.gz"
-OPEN_FALCON_BIN="https://dl.dropboxusercontent.com/u/65132683/open-falcon-binary-0.0.2.tar.gz"
+OPEN_FALCON_BIN="http://7xiumq.com1.z0.glb.clouddn.com/open-falcon-binary-0.0.2.tar.gz"
+#OPEN_FALCON_BIN="https://dl.dropboxusercontent.com/u/65132683/open-falcon-binary-0.0.2.tar.gz"
 
 useradd -m work
 mkdir $WORKDIR
