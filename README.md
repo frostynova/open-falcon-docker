@@ -23,8 +23,8 @@ docker pull frostynova/open-falcon-docker
 * 重启修改了配置的组件：
 
 ```
-docker exec frostynova/open-falcon-docker supervisorctl restart fe
-docker exec frostynova/open-falcon-docker supervisorctl restart portal
+docker exec open-falcon supervisorctl restart fe
+docker exec open-falcon supervisorctl restart portal
 ```	
 
 * 访问 Host IP 的 8080 端口即可
