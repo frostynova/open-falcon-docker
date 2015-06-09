@@ -22,7 +22,7 @@ PERMANENT_SESSION_LIFETIME = 3600 * 24 * 30
 
 UIC_ADDRESS = {
     'internal': 'http://127.0.0.1:8080',
-    'external': 'http://127.0.0.1',
+    'external': 'http://portal.monitor.lain.local',
 }
 
 UIC_TOKEN = ''
