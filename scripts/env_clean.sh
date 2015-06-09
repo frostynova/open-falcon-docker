@@ -3,7 +3,6 @@
 WORKDIR=/home/work/open-falcon
 
 rm $WORKDIR/*.tar.gz
-rm $WORKDIR/fe/*.tar.gz
 rm $WORKDIR/tmp/*
 
 apt-get -y clean
