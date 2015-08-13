@@ -26,6 +26,7 @@ deploy_config judge.cfg
 deploy_config query.cfg
 deploy_config sender.cfg
 deploy_config transfer.cfg
+deploy_config task.cfg
 
 deploy_config dashboard.py
 deploy_config dashboard-gunicorn.conf
@@ -64,4 +65,5 @@ supervisorctl start sender
 supervisorctl start transfer
 supervisorctl start links
 supervisorctl start portal
+supervisorctl start task
 supervisorctl start nginx

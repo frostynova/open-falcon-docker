@@ -1,8 +1,7 @@
 #!/bin/sh
 
 WORKDIR=/home/work/open-falcon
-OPEN_FALCON_BIN="http://7xiumq.com1.z0.glb.clouddn.com/open-falcon-binary-0.0.4.tar.gz"
-#OPEN_FALCON_BIN="https://dl.dropboxusercontent.com/u/65132683/open-falcon-binary-0.0.2.tar.gz"
+OPEN_FALCON_BIN="open-falcon-latest.tar.gz"
 
 useradd -m work
 mkdir $WORKDIR
@@ -37,8 +36,7 @@ mysql -u root < db_schema/uic-db-schema.sql
 
 cd $WORKDIR
 mkdir tmp
-wget $OPEN_FALCON_BIN -O open-falcon-latest.tar.gz
-tar -zxf open-falcon-latest.tar.gz -C tmp/
+tar -zxf /src/$OPEN_FALCON_BIN -C tmp/
 for x in `find ./tmp/ -name "*.tar.gz"`;do \
     app=`echo $x|cut -d '-' -f2`; \
     mkdir -p $app; \

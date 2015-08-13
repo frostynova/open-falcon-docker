@@ -1,7 +1,7 @@
 #!/bin/sh
 
 WORKDIR=/home/work/open-falcon
-
+ls $WORKDIR
 cd $WORKDIR/portal
 
 virtualenv ./env
