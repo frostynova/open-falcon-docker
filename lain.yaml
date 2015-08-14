@@ -5,7 +5,7 @@ build:
 
 worker:
   cmd: /usr/bin/supervisord -c /lain/app/supervisord.conf
-  memory: 1024m
+  memory: 2048m
   volumes:
     - /home/work/open-falcon/conf
     - /home/work/open-falcon/data
