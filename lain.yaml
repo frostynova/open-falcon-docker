@@ -4,7 +4,7 @@ build:
   base: docker.bdp.cc:5002/frostynova/open-falcon:20150813
 
 worker:
-  cmd: /usr/bin/supervisord -c /lain/app/supervisord.conf
+  cmd: /usr/bin/supervisord 
   memory: 2048m
   volumes:
     - /home/work/open-falcon/conf
